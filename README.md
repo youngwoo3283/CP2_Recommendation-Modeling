@@ -17,6 +17,9 @@ click_data_final : 현욱님이 직접 다른사람이 볼 수 있도록 정리�
 
 캐글에 있는 인도네시아 쇼핑몰 데이터인 fashion campus라는 데이터를 활용해서 추천 시스템을 구현하는 프로젝트 추천시스템은 svd, implicit, surprise등의 라이브러리를 사용하였고, martrix factorization와 통계적 시스템으로 추천을 구현함.
 
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/c928e7a4-1f51-434d-8cb1-59a63f0e5818)
+
+
 
 # 데이터셋 설명
 
@@ -25,11 +28,24 @@ transaction_new : 고객의 거래 정보 데이터
 click_data_new : 고객의 사이트에 대한 행동 데이터
 product : 상품 정보 데이터
 
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/159205f1-94ed-4e88-97af-4719d3142746)
+
 
 # 진행 과정 
 
 데이터를 전처리를 한후에 고객 세분화를 통해서 고객을 4분위로 나눈다음에 분위 고객에 따라서 다른 추천 시스템 파이프라인을 구축함. 먼저  원하는 상품을 입력하면 해당 고객의 정보에 따라서 몇분위 고객인지 확인한후에 1,2 분위 고객에게는 mf를 이용해서 해당 상품을 추천해줌. 반면 3,4분위의 고객에게는 고객 데이터가 부족해서 자연어처리를 통한 해당 상품과 비슷한 이름을 가진 상품들을 추천함. 만약 해당 고객에 대한 거래정보가 없거나 신규 고객의 경우는 판매량이 높은 순이나 최근 구매일 낮은 가격등의 통계적 시스템을 이용해서 추천해주도록 함. 
 
+### 파이프 라인
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/f0e2e779-cf25-4bf0-91fb-ee7e6ea6bb1f)
+
+### 통계적 추천
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/f3a0a344-2442-4e4e-a65b-1fbece4ce429)
+
+### nlp를 이용한 추천
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/5e0ca0db-b739-41df-a349-26fb723ae631)
+
+### cf를 이용한 추천
+![image](https://github.com/youngwoo3283/CP2_Recommendation-Modeling/assets/69841073/8109e5fc-4360-4b69-b438-10c18d6cb5b9)
 
 
 # 진행 결과
